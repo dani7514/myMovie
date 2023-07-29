@@ -1,0 +1,130 @@
+<body class="text-white">
+    <header class="bg-image">
+      <div class="container">
+        <div
+          class="hero-container hero-padding d-flex flex-column justify-content-center"
+        >
+          <h1 class="yellow fs-1 fw-bold">Watch Movies</h1>
+          <p class="fs-5 fw-normal">
+            Over millions of movies. Explore all now.
+          </p>
+
+          <form action="./search.html" method="get" class="d-flex gap-3">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for movie"
+              class="form-control w-75 fs-6 fw-normal text-dark rounded-2 border-0 inp"
+            />
+            <button
+              type="submit"
+              class="btn btn-outline-warning border-3 py-3 px-2 px-sm-3 px-md-5 rounded-0 rounded-end fw-normal fs-6"
+              aria-label="Search for movie by title"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="my-3 my-md-5">
+      <section class="container py-4">
+        <h2 class="py-2" >Upcoming Movies</h2>
+        <ul id="upcoming-movies" class="d-flex  gap-5 overflow-auto p-4" >
+          <li  *ngFor="let upcome of upcominges" class="shadow">
+            <a >
+              <img src='http://localhost:3000/{{upcome.poster_path}}' width="300px" height="420px" alt=""/>
+                <div class="movie-card-title d-flex justify-content-around py-3">
+                  <h2 class="fs-6">{{upcome.title}}</h2>
+                  <div class="border-3 rounded border-warning fs-6">{{upcome.vote_average}}</div>
+
+                </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="container text- py-5">
+        <div class="row gap-5 align-items-stretch">
+          <table id="popular-table" class="table-sm col-10 col-md-5 mx-auto">
+            <thead class="bg-yellow text-dark fw-bold fs-3">
+              <tr>
+                <th scope="col" colspan="3" class="p-3 text-center">
+                  Popular Movies
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pop of populares; index as i" class="fw-normal ">
+                <td class="border-light border-bottom  border-right fs-5 text-center p-3">{{ i+ 1}}</td>
+                <td class="border-light border-bottom text-start fs-5 p-3">{{pop.title}}</td>
+                <td class="border-light border-bottom text-end fs-6 p-3 rounded  fw-bold ">{{pop.vote_average}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="trending-table" class="table-sm col-10 col-md-5 mx-auto">
+            <thead class="bg-yellow text-dark fw-bold fs-3">
+              <tr>
+                <th scope="col" colspan="3" class="p-3 text-center">
+                  Trending Movies
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tre of trendinges; index as i" class="fw-normal ">
+                <td class="border-light border-bottom  border-right fs-5 text-center p-3">{{ i+ 1}}</td>
+                <td class="border-light border-bottom text-start fs-5 p-3">{{tre.title}}</td>
+                <td class="border-light border-bottom text-end fs-6 p-3 rounded  fw-bold ">{{tre.vote_average}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="container py-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="py-2">Popular Movies</h2>
+          <a
+            href="./trending.html"
+            class="yellow text-decoration-underline link-light fs-5"
+            aria-label="explore more on popular movies"
+            >Explore now</a
+          >
+        </div>
+        <ul id="trending-movies" class="py-4 px-0 d-flex gap-4 shadow-lg  ">
+          <li *ngFor="let pop of featuredpopulares" class="rounded-2 bg-dark"> 
+            <a >
+             <img src="http://localhost:3000/{{pop.poster_path}}" width="300px" height="420px" alt="">
+                <div class="movie-card-title  d-flex justify-content-around  py-3 ">
+                  <h2 class="fs-6 ">{{pop.title}}</h2>
+                  <p class="border-3 rounded border-warning fs-6 ">{{pop.vote_average}}</p>
+                </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="container py-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="py-2">Trending Movies</h2>
+          <a
+            href="./popular.html"
+            class="yellow text-decoration-underline link-light fs-5"
+            aria-label="explore more on popular movies"
+            >Explore now</a
+          >
+        </div>
+        <ul id="popular-movies" class="py-4 px-0 d-flex gap-4 shadow-lg  ">
+          <li *ngFor="let tre of featuredTrendinges" class="rounded-2 bg-dark">
+            <a >
+             <img src="http://localhost:3000/{{tre.poster_path}}" width="300px" height="420px" alt="">
+                <div class="movie-card-title  d-flex justify-content-around  py-3 ">
+                  <h2 class="fs-6 ">
+                    {{tre.title}}
+                  </h2>
+                  <p class="border-3 rounded border-warning fs-6 ">{{tre.vote_average}}</p>
+                </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+</body>

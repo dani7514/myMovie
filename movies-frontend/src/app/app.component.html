@@ -1,0 +1,146 @@
+
+  <nav class="container navbar  navbar-expand-md navbar-dark  border border-3 border-warning border-top-0 rounded-bottom backdrop-filter">
+    <div
+      class="container py-2 d-flex justify-content-between align-items-center"
+    >
+      <a href="./index.html" class="navbar-brand fw-bold fs-2"
+        ><span class="yellow">Movie</span> <span class=""> Watch</span></a
+      >
+
+      <button
+        class="navbar-toggler border border-warning btn-outline-warning"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Expand Menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav gap-4 gap-lg-5 text-center ms-auto">
+          <li class="nav-item p-1 p-md-0">
+            <a routerLink="popular" class="link-light fs-6 fw-normal"
+              >Popular</a
+            >
+          </li>
+          <li class="nav-item p-1 p-md-0">
+            <a routerLink="treding" class="link-light fs-6 fw-normal"
+              >Trending</a
+            >
+          </li>
+          <li class="nav-item p-1 p-md-0">
+            <a routerLink="about" class="link-light fs-6 fw-normal"
+              >About</a
+            >
+          </li>
+          <li class="nav-item p-1 p-md-0">
+            <a routerLink="contact" class="link-light fs-6 fw-normal"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item p-1 p-md-0" *ngIf="isNotlogin">
+            <button class="btn btn-outline-warning">
+              <a routerLink="login" class="link-light fs-6 fw-normal "
+              >Login</a
+            >
+            </button>
+           
+          </li>
+          <li
+            class="nav-item p-1 bg-color rounded-3 bg-yellow"
+            title="Logout"
+            *ngIf="!isNotlogin"
+          >
+            <button
+              id="logout-btn"
+              class="btn  btn-md link-light fs-6 fst-normal"
+              (click)="logOut()"
+            >
+              <img
+                src="../../assets/images/logout.svg"
+                width="30"
+                height="20"
+                alt=""
+              />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<router-outlet></router-outlet>
+<footer class="footer-bg-image">
+  <div
+    class="container py-5 d-flex align-items-end justify-content-between"
+  >
+    <div>
+      <a href="./index.html" class="fw-bold link-light fs-2"
+        >Movies Watch</a
+      >
+      <p class="fs-6">Copyright &copy; 2022 Movies Watch</p>
+    </div>
+    <nav>
+      <ul class="d-flex flex-column gap-2 fs-6 fw-normal">
+        <li><a href="./index.html" class="link-light">Home</a></li>
+        <li>
+          <a href="./popular.html" class="link-light">Popular</a>
+        </li>
+        <li>
+          <a href="./trending.html" class="link-light">Trending</a>
+        </li>
+        <li><a href="./about.html" class="link-light">About</a></li>
+        <li>
+          <a href="./contact.html" class="link-light">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <nav>
+    <ul
+      class="d-flex align-items-center justify-content-center gap-2 bg-yellow p-2 m-0"
+    >
+      <li>
+        <a href="https://facebook.com"
+          ><img
+            src="../../assets/images/facebook.svg"
+            alt="facebook"
+            width="50"
+            height="50"
+        /></a>
+      </li>
+      <li>
+        <a href="https://instagram.com">
+          <img
+            src="../../assets/images/instagram.svg"
+            alt="instagram"
+            width="50"
+            height="50"
+        /></a>
+      </li>
+      <li>
+        <a href="https://telegram.org"
+          ><img
+            src="../../assets/images/telegram.svg"
+            alt="telegram"
+            width="50"
+            height="50"
+        /></a>
+      </li>
+      <li>
+        <a href="https://twitter.com">
+          <img
+            src="../../assets/images/twitter.svg"
+            alt="twitter"
+            width="50"
+            height="50"
+            title="twitter"
+        /></a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+

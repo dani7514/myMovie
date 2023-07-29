@@ -1,0 +1,108 @@
+<body class="text-white">
+    <main>
+      <section class="container">
+        <ul
+          class="pt-5 pb-3 overflow-auto d-flex gap-5 align-items-center fs-5"
+          
+          
+        >
+          <li>
+            <button
+              type="button"
+              name="Action"
+              #action
+              (click)="getSmt(action.name)"
+              class="genre btn btn-large btn-outline-warning border-3"
+              
+            >
+              Action
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              name="Animation"
+              #animation
+              (click)="getSmt(animation.name)"
+              class="genre btn btn-large btn-outline-warning border-3"
+              
+            >
+              Animation
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              name="Comedy"
+              #comedy
+              (click)="getSmt(comedy.name)"
+              class="genre btn btn-large btn-outline-warning border-3"
+          
+            >
+              Comedy
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              name="Crime"
+              #crime
+              (click)="getSmt(crime.name)"
+              class="genre btn btn-large btn-outline-warning border-3"
+              
+            >
+              Crime
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              name="Thriller"
+              #thriller
+              (click)="getSmt(thriller.name)"
+              class="genre btn btn-large btn-outline-warning border-3"
+              
+            >
+              Thriller
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              name="Fantasy"
+              #fantacy
+              (click)="getSmt(fantacy.name)"
+              class="genre btn btn-large btn-outline-warning border-3"
+              
+            >
+              Fantasy
+            </button>
+          </li>
+        </ul>
+        <section class="containermy-3 my-md-5">
+          <h1 class="fw-bold fs-2">What's Popular</h1>
+          <ul id="popular-movies" class="py-4 px-0 d-flex flex-wrap gap-4 shadow-lg  ">
+            <li *ngFor="let pop of populares" class="rounded-2 bg-dark"> 
+              <a >
+               <img src="http://localhost:3000/{{pop.poster_path}}" width="300px" height="420px" alt="">
+                  <div class="movie-card-title  d-flex justify-content-around  py-3 ">
+                    <h2 class="fs-6">{{pop.title}}</h2>
+                    <p class="border-3 rounded border-warning fs-6 ">{{pop.vote_average}}</p>
+                  </div>
+              </a>
+            </li>
+          </ul>
+          <div class="container py-3 d-flex justify-content-center">
+            <button
+              aria-label="Load more popular movie lists"
+              id="load-more"
+              class="btn btn-large btn-outline-warning border-3"
+              (click)="loadingMore()"
+            >
+              Load More
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+</body>

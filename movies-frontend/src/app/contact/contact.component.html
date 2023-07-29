@@ -1,0 +1,140 @@
+<body class="text-white">
+    <main class="">
+      <div class="contact-bg-image bg-input">
+        <section class="container py-5">
+          <h2 class="fw-bold fs-2 mb-5">Connect With Us</h2>
+          <div class="fs-5">
+            <p class="mb-3">
+              If you have any questions or need help, please fill out the form
+              below. We do our best to respond to the questions.
+            </p>
+            <p
+              class="bg-success py-3 px-3 px-md-5 none font-arial"
+              id="contact-message"
+            >
+              Your request is sent successfully!
+            </p>
+            <form id="contact-form" novalidate class="font-arial row p-0 m-0">
+              <div class="col-12 col-md-5 d-flex flex-column gap-1 mb-3">
+                <label class="fs-5 form-label" for="full-name"
+                  >Full Name
+                </label>
+                <input
+                  class="form-control py-3 px-2 fs-6 fw-normal border-0 bg-input ms-1 w-75 text-white inp"
+                  type="text"
+                  name="name"
+                  id="full-name"
+                  placeholder="John Doe"
+                  required
+                />
+                <p class="none text-danger fst-italic" id="fullnameRequired">
+                  Full Name is required
+                </p>
+                <p class="none text-danger fst-italic" id="fullnameInvalid">
+                  Invalid name format
+                </p>
+              </div>
+              <div class="col-12 col-md-5 d-flex flex-column gap-1 mb-3">
+                <label class="fs-5 form-label" for="phone-number"
+                  >Phone Number</label
+                >
+                <input
+                  class="form-control py-3 px-2 fs-6 fw-normal border-0 bg-input ms-1 w-75 text-white inp"
+                  type="tel"
+                  name="phone"
+                  id="phone-number"
+                  placeholder="+251 9* *** ****"
+                />
+                <p class="none text-danger fst-italic" id="phoneInvalid">
+                  Use Format: +251 9* *** ****
+                </p>
+              </div>
+              <div class="col-12 col-md-5 d-flex flex-column gap-1 mb-3">
+                <label class="fs-5 form-label" for="email">Email</label>
+                <input
+                  class="form-control py-3 px-2 fs-6 fw-normal border-0 bg-input ms-1 w-75 text-white inp"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="johndoe@site.com"
+                  required
+                />
+                <p class="none text-danger fst-italic" id="emailRequired">
+                  Email is required
+                </p>
+                <p class="none text-danger fst-italic" id="emailInvaild">
+                  Use Format: johndoe@domain.com
+                </p>
+              </div>
+              <div class="col-12 col-md-5 d-flex flex-column gap-1 mb-3">
+                <label class="fs-5 form-label" for="subject">Subject</label>
+                <input
+                  class="form-control py-3 px-2 fs-6 fw-normal border-0 bg-input ms-1 w-75 text-white inp"
+                  type="text"
+                  name="name"
+                  id="subject"
+                  placeholder="Subject of the mail"
+                />
+              </div>
+              <div class="col-12 col-md-5 d-flex flex-column gap-1 mb-3">
+                <label class="fs-5 form-label" for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  cols="5"
+                  rows="5"
+                  required
+                  class="form-control py-3 px-2 fs-6 fw-normal border-0 bg-input ms-1 w-75 text-white txtarea"
+                ></textarea>
+                <p class="none text-danger fst-italic" id="mesRequired">
+                  Message can't be empty
+                </p>
+                <p class="none text-danger fst-italic" id="mesInvalid">
+                  Message should be lessthan 200 characters.
+                </p>
+              </div>
+              <div class="col-12 mt-3">
+                <button
+                  type="submit"
+                  id="submit"
+                  class="btn btn-outline-warning btn-large fs-6 fw-bold border-3"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <section class="container py-5">
+        <h2 class="mb-5 fs-2">Reach Us</h2>
+        <address class="mx-md-3">
+          <div class="row gx-3 gy-2">
+            <h3 class="col-6 col-sm-2 fs-4 fw-normal">Email:</h3>
+            <p class="col-11 col-sm-6 ms-2 ms-sm-0 font-courier fs-5">
+              michael12gashaw@gmail.com
+            </p>
+          </div>
+          <div class="row gx-3 gy-2">
+            <h3 class="col-6 col-sm-2 fs-4 fw-normal">Phone:</h3>
+            <p class="col-11 col-sm-6 ms-2 ms-sm-0 font-courier fs-5">
+              +251 94 535 7921
+            </p>
+          </div>
+          <div class="row gx-3 gy-2">
+            <h3 class="col-6 col-sm-2 fs-4 fw-normal">Address:</h3>
+            <p class="col-11 col-sm-6 ms-2 ms-sm-0 font-courier fs-5">
+              AAU College of Natural Sciences,<br />
+              Queen Elizabeth Street,<br />
+              1415 Arada, Ethiopia
+            </p>
+          </div>
+        </address>
+      </section>
+    </main>
+  </body>
+  
+
+
